@@ -1,0 +1,16 @@
+---
+title: "Home"
+layout: "layouts/base.njk"
+permalink: "/"
+---
+
+<h1>Welcome to Weave Studio Template</h1>
+<p>This is a test page to verify 11ty is working.</p>
+<p>Testing responsive images:</p>
+{% image "https://picsum.photos/600/400", "Test placeholder image" %}
+
+<nav style="margin-top: 2rem;">
+  <a href="/blog/">View Blog Posts</a>
+</nav>
+
+<p>Built on: {{ page.date | readableDate }}</p>
