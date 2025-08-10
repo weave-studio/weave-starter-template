@@ -33,6 +33,19 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('dd LLL yyyy');
   });
 
+  // Blog post navigation filters
+  eleventyConfig.addFilter("getPreviousCollectionItem", function(collection, page) {
+    if (!collection || !page) return null;
+    const index = collection.findIndex(item => item.inputPath === page.inputPath);
+    return index > 0 ? collection[index - 1] : null;
+  });
+
+  eleventyConfig.addFilter("getNextCollectionItem", function(collection, page) {
+    if (!collection || !page) return null;
+    const index = collection.findIndex(item => item.inputPath === page.inputPath);
+    return index < collection.length - 1 ? collection[index + 1] : null;
+  });
+
   // Image optimization shortcode
   eleventyConfig.addAsyncShortcode('image', async function (src, alt, sizes = '100vw') {
     if (alt === undefined) {

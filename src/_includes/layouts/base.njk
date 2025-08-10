@@ -9,7 +9,7 @@
   <!-- Preload critical fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Main CSS -->
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -21,6 +21,7 @@
       const theme = localStorage.getItem('theme') || 
                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
       document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.classList.add('js-enabled');
     })();
   </script>
 </head>
@@ -28,17 +29,18 @@
   <!-- Skip link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
+  <!-- Site header -->
+  {% include "components/header.njk" %}
+  
   <!-- Main content -->
-  <main id="main-content">
+  <main id="main-content" class="main-content" role="main">
     {{ content | safe }}
   </main>
   
-  <!-- Temporary navigation (will be replaced in Phase A4) -->
-  <nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--color-border-light);">
-    <div class="container">
-      <a href="/">Home</a> | 
-      <a href="/blog/">Blog</a>
-    </div>
-  </nav>
+  <!-- Site footer -->
+  {% include "components/footer.njk" %}
+  
+  <!-- Main JavaScript -->
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

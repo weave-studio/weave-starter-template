@@ -1,0 +1,33 @@
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="site-header__content">
+      <!-- Logo/Site title -->
+      <div class="site-header__branding">
+        <a href="/" class="site-header__logo" aria-label="Home">
+          {% if site.logo %}
+            <img src="{{ site.logo }}" alt="{{ site.name }}" width="40" height="40">
+          {% endif %}
+          <span class="site-header__title">{{ site.name }}</span>
+        </a>
+      </div>
+
+      <!-- Main navigation -->
+      {% include "components/navigation.njk" %}
+
+      <!-- Theme toggle and mobile menu button -->
+      <div class="site-header__actions">
+        {% include "components/theme-toggle.njk" %}
+        
+        <button class="mobile-menu-toggle" 
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+          <span class="mobile-menu-toggle__line"></span>
+          <span class="mobile-menu-toggle__line"></span>
+          <span class="mobile-menu-toggle__line"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

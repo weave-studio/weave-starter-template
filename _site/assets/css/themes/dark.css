@@ -72,46 +72,6 @@
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
   }
   
-  /* Theme toggle button */
-  .theme-toggle {
-    position: relative;
-    width: 50px;
-    height: 26px;
-    background-color: var(--color-gray-300);
-    border-radius: var(--radius-full);
-    border: none;
-    cursor: pointer;
-    transition: background-color var(--duration-normal) var(--ease-out);
-  }
-  
-  .theme-toggle:focus {
-    outline: 2px solid var(--color-primary-500);
-    outline-offset: 2px;
-  }
-  
-  .theme-toggle::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 22px;
-    height: 22px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform var(--duration-normal) var(--ease-out);
-    box-shadow: var(--shadow-sm);
-  }
-  
-  [data-theme="dark"] .theme-toggle,
-  :root:not([data-theme="light"]) .theme-toggle {
-    background-color: var(--color-primary-600);
-  }
-  
-  [data-theme="dark"] .theme-toggle::after,
-  :root:not([data-theme="light"]) .theme-toggle::after {
-    transform: translateX(24px);
-  }
-  
   /* Ensure proper contrast in dark mode */
   [data-theme="dark"] ::selection,
   :root:not([data-theme="light"]) ::selection {

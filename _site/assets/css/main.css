@@ -9,11 +9,14 @@
 @import url('./base/layout.css');
 
 @import url('./components/buttons.css');
+@import url('./components/header.css');          
+@import url('./components/navigation.css');      
+@import url('./components/footer.css');          
+@import url('./components/theme-toggle.css');    
+@import url('./components/page-layouts.css');    
 /* @import url('./components/cards.css'); */
 /* @import url('./components/forms.css'); */
-/* @import url('./components/navigation.css'); */
 /* @import url('./components/hero.css'); */
-/* @import url('./components/footer.css'); */
 
 @import url('./utilities/spacing.css');
 @import url('./utilities/grid.css');
@@ -274,3 +277,199 @@
 .skip-link:focus {
   top: 6px;
 }
+
+/* Enhanced card styles - fixes text color issues */
+.card {
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+  
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  .card h3 {
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-3);
+  }
+  
+  .card p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+  }
+  
+  /* Dark mode card improvements */
+  [data-theme="dark"] .card {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+  
+  [data-theme="dark"] .card h3 {
+    color: var(--color-gray-100);
+  }
+  
+  [data-theme="dark"] .card p {
+    color: var(--color-gray-300);
+  }
+  
+  [data-theme="dark"] .card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  }
+
+  /* Dark mode fixes for all pages */
+[data-theme="dark"] {
+    /* Ensure all backgrounds are properly dark */
+    background-color: var(--color-bg-primary);
+  }
+  
+  [data-theme="dark"] body {
+    background-color: var(--color-bg-primary);
+  }
+  
+  /* Fix page headers in dark mode */
+  [data-theme="dark"] .page__header {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+  
+  [data-theme="dark"] .post__header {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+  
+  /* Fix homepage section backgrounds in dark mode */
+  [data-theme="dark"] .section {
+    background-color: var(--color-bg-primary);
+  }
+  
+  /* Tone down hero background in dark mode */
+  [data-theme="dark"] .hero {
+    background: linear-gradient(135deg, var(--color-gray-900) 0%, var(--color-gray-800) 100%);
+  }
+  
+  /* Fix prose content in dark mode */
+  [data-theme="dark"] .prose {
+    color: var(--color-text-primary);
+  }
+  
+  [data-theme="dark"] .prose h1,
+  [data-theme="dark"] .prose h2,
+  [data-theme="dark"] .prose h3,
+  [data-theme="dark"] .prose h4,
+  [data-theme="dark"] .prose h5,
+  [data-theme="dark"] .prose h6 {
+    color: var(--color-gray-100);
+  }
+  
+  [data-theme="dark"] .prose p {
+    color: var(--color-gray-300);
+  }
+  
+  [data-theme="dark"] .prose a {
+    color: var(--color-primary-400);
+  }
+  
+  [data-theme="dark"] .prose a:hover {
+    color: var(--color-primary-300);
+  }/* Dark mode fixes for all pages */
+[data-theme="dark"] {
+  /* Ensure all backgrounds are properly dark */
+  background-color: var(--color-bg-primary);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--color-bg-primary);
+}
+
+/* Fix page headers in dark mode */
+[data-theme="dark"] .page__header {
+  background-color: var(--color-gray-800);
+  border-color: var(--color-gray-700);
+}
+
+[data-theme="dark"] .post__header {
+  background-color: var(--color-gray-800);
+  border-color: var(--color-gray-700);
+}
+
+/* Fix homepage section backgrounds in dark mode */
+[data-theme="dark"] .section {
+  background-color: var(--color-bg-primary);
+}
+
+/* Tone down hero background in dark mode */
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, var(--color-gray-900) 0%, var(--color-gray-800) 100%);
+}
+
+/* Fix prose content in dark mode */
+[data-theme="dark"] .prose {
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .prose h1,
+[data-theme="dark"] .prose h2,
+[data-theme="dark"] .prose h3,
+[data-theme="dark"] .prose h4,
+[data-theme="dark"] .prose h5,
+[data-theme="dark"] .prose h6 {
+  color: var(--color-gray-100);
+}
+
+[data-theme="dark"] .prose p {
+  color: var(--color-gray-300);
+}
+
+[data-theme="dark"] .prose a {
+  color: var(--color-primary-400);
+}
+
+[data-theme="dark"] .prose a:hover {
+  color: var(--color-primary-300);
+}
+
+/* Override CSS custom properties directly in dark mode */
+[data-theme="dark"] {
+    --color-bg-primary: #111827 !important;
+    --color-bg-secondary: #1f2937 !important;
+    --color-bg-muted: #374151 !important;
+    --color-text-primary: #f9fafb !important;
+    --color-text-secondary: #d1d5db !important;
+  }
+  
+  /* Force all major elements to use correct dark backgrounds */
+  [data-theme="dark"] html,
+  [data-theme="dark"] body,
+  [data-theme="dark"] main,
+  [data-theme="dark"] .page,
+  [data-theme="dark"] .post,
+  [data-theme="dark"] .home {
+    background-color: #111827 !important;
+    color: #f9fafb !important;
+  }
+  
+  /* Force page content areas */
+  [data-theme="dark"] .page__content,
+  [data-theme="dark"] .post__content,
+  [data-theme="dark"] .main-content {
+    background-color: #111827 !important;
+  }
+  
+  /* Force section backgrounds */
+  [data-theme="dark"] .section {
+    background-color: #111827 !important;
+  }
+  
+  /* Override any inline styles that might be causing issues */
+  [data-theme="dark"] [style*="background-color: var(--color-bg-primary)"] {
+    background-color: #111827 !important;
+  }
+  
+  [data-theme="dark"] [style*="background-color: var(--color-bg-secondary)"] {
+    background-color: #1f2937 !important;
+  }
