@@ -1,3 +1,4 @@
+<!-- src/_includes/components/header.njk -->
 <header class="site-header" role="banner">
   <div class="container">
     <div class="site-header__content">
@@ -14,10 +15,25 @@
       <!-- Main navigation -->
       {% include "components/navigation.njk" %}
 
-      <!-- Theme toggle and mobile menu button -->
+      <!-- Header actions: Search, Language, Theme, Mobile Menu -->
       <div class="site-header__actions">
+        <!-- Search (desktop and tablet) -->
+        <div class="site-header__search">
+          {% include "components/search.njk" %}
+        </div>
+        
+        <!-- Language toggle -->
+        <button class="language-toggle" 
+                aria-label="Change language"
+                data-language-toggle
+                title="Click to change language">
+          EN
+        </button>
+        
+        <!-- Theme toggle -->
         {% include "components/theme-toggle.njk" %}
         
+        <!-- Mobile menu button -->
         <button class="mobile-menu-toggle" 
                 aria-label="Toggle navigation menu"
                 aria-expanded="false"

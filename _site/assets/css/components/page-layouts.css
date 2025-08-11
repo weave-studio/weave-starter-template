@@ -245,3 +245,75 @@
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-snug);
   }
+
+/* ========================================================================
+   Article Element Spacing Fix - With Better Breathing Room
+   ======================================================================== */
+
+/* Remove default article spacing */
+article {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Ensure page and post articles don't add extra space */
+  .page,
+  .post {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Remove any unwanted spacing from main content areas */
+  .page__content,
+  .post__content {
+    flex: 1;
+    margin: 0;
+  }
+  
+  /* Ensure consistent spacing for page/post headers */
+  .page__header,
+  .post__header {
+    margin: 0;
+    flex-shrink: 0;
+  }
+  
+  /* Fix main content area if it has extra margins */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+  }
+  
+  /* Reset any default spacing that might be inherited */
+  main {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Ensure prose content has proper spacing within containers */
+  .prose {
+    margin: 0;
+  }
+  
+  /* Add breathing room - adjust these values to your preference */
+  .page__content .container,
+  .post__content .container {
+    padding-top: var(--space-16);    /* Add some top spacing */
+    padding-bottom: var(--space-16);  /* Add some bottom spacing */
+  }
+  
+  /* For pages without headers (like 404), add more top space */
+  .page:not(:has(.page__header)) .page__content .container {
+    padding-top: var(--space-16);
+  }
+  
+  /* Adjust header spacing for better balance */
+  .page__header .container,
+  .post__header .container {
+    padding-bottom: var(--space-6); /* Reduce bottom padding of headers slightly */
+  }
