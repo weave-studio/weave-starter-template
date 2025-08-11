@@ -20,6 +20,9 @@
         "test:visual": "playwright test tests/visual.spec.js",
         "lighthouse": "lhci autorun",
         "deploy": "npm run build && gh-pages -d _site",
+        "cms:dev": "npx decap-server & npm run dev",
+        "cms:proxy": "npx decap-server",
+        "build:cms": "npm run build && cp -r admin _site/admin",
         "deploy:netlify": "npm run build && netlify deploy --prod --dir=_site",
         "deploy:vercel": "npm run build && vercel --prod",
         "prepare": "husky install"

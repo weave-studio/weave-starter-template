@@ -19,24 +19,8 @@ module.exports = {
   // Logo
   logo: "/assets/images/logo.svg",
   
-  // Social media links
-  social: [
-    {
-      name: "Twitter",
-      url: "https://twitter.com/weavestudio",
-      icon: "twitter"
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/weave-studio",
-      icon: "github"
-    },
-    {
-      name: "LinkedIn",
-      url: "https://linkedin.com/company/weavestudio",
-      icon: "linkedin"
-    }
-  ],
+  // Social media - now managed via CMS
+  social: require('./social.js').social || [],
   
   // Legal links
   legal: [

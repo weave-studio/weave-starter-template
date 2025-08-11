@@ -83,7 +83,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets/css');
   eleventyConfig.addPassthroughCopy('src/assets/js');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
-  eleventyConfig.addPassthroughCopy('src/favicon.ico');  
+  eleventyConfig.addPassthroughCopy('src/favicon.ico');
+  eleventyConfig.addPassthroughCopy('admin');
+  eleventyConfig.addPassthroughCopy('src/_redirects');
 
   // Add collections
   eleventyConfig.addCollection('posts', function (collection) {
@@ -118,9 +120,35 @@ module.exports = function (eleventyConfig) {
     </div>`;
   });
 
+        // Enhanced callout shortcode for CMS
+  eleventyConfig.addPairedShortcode('callout', function (content, type = 'info') {
+    const styles = {
+      info: 'background: #e6f3ff; border-left: 4px solid #0066cc; color: #003d7a;',
+      warning: 'background: #fff3cd; border-left: 4px solid #ffc107; color: #856404;',
+      success: 'background: #d1eddd; border-left: 4px solid #28a745; color: #155724;',
+      error: 'background: #f8d7da; border-left: 4px solid #dc3545; color: #721c24;'
+    };
+    
+    return `<div class="callout callout--${type}" style="${styles[type] || styles.info} padding: 1rem; margin: 1rem 0; border-radius: 0.25rem;" role="note">
+      <div class="callout__content">${content}</div>
+    </div>`;
+  });
+
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
 
   eleventyConfig.addShortcode('buildTime', () => `${new Date().toISOString()}`);
+
+  eleventyConfig.addShortcode('youtube', function(videoId, title) {
+    return `<div class="video-embed" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1rem 0;">
+      <iframe 
+        src="https://www.youtube.com/embed/${videoId}" 
+        title="${title}"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>`;
+  });
 
   // Production optimizations
   if (process.env.NODE_ENV === 'production') {

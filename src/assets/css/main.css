@@ -13,7 +13,8 @@
 @import url('./components/navigation.css');      
 @import url('./components/footer.css');          
 @import url('./components/theme-toggle.css');    
-@import url('./components/page-layouts.css');    
+@import url('./components/page-layouts.css'); 
+@import url('./components/cms-components.css');   
 /* @import url('./components/cards.css'); */
 /* @import url('./components/forms.css'); */
 /* @import url('./components/hero.css'); */
