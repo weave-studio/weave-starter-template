@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Image optimization shortcode
-  eleventyConfig.addAsyncShortcode('image', async function (src, alt, sizes = '100vw') {
+  eleventyConfig.addAsyncShortcode('image', async function (src, alt, sizes = '100vw', loading = 'lazy') {
     if (alt === undefined) {
       throw new Error(`Missing \`alt\` on image from: ${src}`);
     }
@@ -71,7 +71,7 @@ module.exports = function (eleventyConfig) {
     let imageAttributes = {
       alt,
       sizes,
-      loading: 'lazy',
+      loading: loading,
       decoding: 'async'
     };
 
@@ -86,6 +86,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
   eleventyConfig.addPassthroughCopy('admin');
   eleventyConfig.addPassthroughCopy('src/_redirects');
+  eleventyConfig.addPassthroughCopy('src/_headers');
 
   // Add collections
   eleventyConfig.addCollection('posts', function (collection) {
@@ -104,6 +105,46 @@ module.exports = function (eleventyConfig) {
       });
     });
     return Array.from(tagSet).sort();
+  });
+
+  // Enhanced collections for case studies
+eleventyConfig.addCollection('case_studies', function (collection) {
+    return collection.getFilteredByGlob('src/case-studies/*.md')
+      .filter(item => !item.data.draft)
+      .sort((a, b) => {
+        if (a.data.completion_date && b.data.completion_date) {
+          return new Date(b.data.completion_date) - new Date(a.data.completion_date);
+        }
+        return new Date(b.date) - new Date(a.date);
+      });
+  });
+  
+  // Featured posts collection
+  eleventyConfig.addCollection('featuredPosts', function (collection) {
+    return collection.getFilteredByGlob('src/blog/posts/*.md')
+      .filter(post => post.data.featured && !post.data.draft)
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 3);
+  });
+  
+  // Recent posts for sidebar/widgets
+  eleventyConfig.addCollection('recentPosts', function (collection) {
+    return collection.getFilteredByGlob('src/blog/posts/*.md')
+      .filter(post => !post.data.draft)
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 5);
+  });
+  
+  // Add enhanced shortcodes for better content creation
+  eleventyConfig.addPairedShortcode('highlight', function (content, type = 'info') {
+    return `<div class="highlight highlight--${type}" role="note">
+      <div class="highlight__content">${content}</div>
+    </div>`;
+  });
+  
+  eleventyConfig.addShortcode('button', function(text, url, style = 'primary') {
+    const external = url.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : '';
+    return `<a href="${url}" class="btn btn--${style}" ${external}>${text}</a>`;
   });
 
   // Add shortcodes

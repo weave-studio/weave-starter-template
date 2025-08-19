@@ -8,28 +8,28 @@
 
 
 
-<title>Weave Studio Template</title>
-<meta name="title" content="Weave Studio Template">
-<meta name="description" content="High-performance starter template for freelance web design projects">
+<title>Frequently Asked Questions | Weave Studio Template</title>
+<meta name="title" content="Frequently Asked Questions | Weave Studio Template">
+<meta name="description" content="Common questions about our web design services and process">
 <meta name="keywords" content="web design, 11ty, jamstack, starter template, accessible, performance">
 <meta name="author" content="Weave Studio">
 
 <!-- Canonical URL -->
-<link rel="canonical" href="http://localhost:8080/">
+<link rel="canonical" href="http://localhost:8080/faq/">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://localhost:8080/">
-<meta property="og:title" content="Weave Studio Template">
-<meta property="og:description" content="High-performance starter template for freelance web design projects">
+<meta property="og:url" content="http://localhost:8080/faq/">
+<meta property="og:title" content="Frequently Asked Questions | Weave Studio Template">
+<meta property="og:description" content="Common questions about our web design services and process">
 <meta property="og:site_name" content="Weave Studio Template">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="http://localhost:8080/">
-<meta property="twitter:title" content="Weave Studio Template">
-<meta property="twitter:description" content="High-performance starter template for freelance web design projects">
+<meta property="twitter:url" content="http://localhost:8080/faq/">
+<meta property="twitter:title" content="Frequently Asked Questions | Weave Studio Template">
+<meta property="twitter:description" content="Common questions about our web design services and process">
 
 
 <meta property="twitter:site" content="@weavestudio">
@@ -91,7 +91,7 @@
     
       <li class="main-navigation__item">
         <a href="/" 
-           class="main-navigation__link main-navigation__link--active"
+           class="main-navigation__link"
            >
           Home
           
@@ -263,85 +263,130 @@
   <!-- Main content -->
   <main id="main-content" class="main-content" role="main">
     
-<div class="home">
+<article class="page">
   
-<section class="hero">
-  <div class="container">
-    <div class="hero__content">
-      <h1>
-        Modern Web Design
-        <span style="display: block; color: var(--color-primary-600); font-weight: var(--font-weight-extrabold);">Made Simple</span>
-      </h1>
-      <p class="lead">
-        High-performance, accessible starter template for freelance web design projects. 
-        Built with 11ty, Vite, and modern best practices.
-      </p>
-      <div style="display: flex; gap: var(--space-4); margin-top: var(--space-8);">
-        <a href="/about/" class="btn btn--primary btn--lg" aria-label="Learn more about our web design services and approach">About Us</a>
-        <a href="/contact/" class="btn btn--secondary btn--lg" aria-label="Get started with your web design project by contacting us">Get Started</a>
+    <header class="page__header">
+      <div class="container">
+        <h1 class="page__title">Frequently Asked Questions</h1>
+        
+          <p class="page__description">Common questions about our web design services and process</p>
+        
+        
+      </div>
+    </header>
+  
+
+  <div class="page__content">
+    <div class="container">
+      <div class="prose">
+        
+<div class="faq-page">
+  <div class="faq-intro">
+    <h1>Frequently Asked Questions</h1>
+    <p class="lead">Find answers to common questions about our services, process, and pricing.</p>
+  </div>
+
+  <div class="faq-sections">
+    
+    <!-- General Questions -->
+    <section class="faq-section">
+      <h2 class="faq-section-title">General Questions</h2>
+      <div class="faq-list">
+        
+        <div class="faq-item" data-enhance="accordion">
+          <button class="faq-question" 
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-1">
+            <span class="faq-question-text">What services do you offer?</span>
+            <span class="faq-question-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" 
+               id="faq-1"
+               data-accordion-content
+               style="display: none;">
+            <div class="faq-answer-content">
+              <p>We offer comprehensive web design and development services including:</p>
+              <ul>
+                <li>Custom website design and development</li>
+                <li>WordPress and headless CMS solutions</li>
+                <li>E-commerce development</li>
+                <li>Website redesigns and modernization</li>
+                <li>Performance optimization</li>
+                <li>SEO and accessibility audits</li>
+                <li>Ongoing maintenance and support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-enhance="accordion">
+          <button class="faq-question" 
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-2">
+            <span class="faq-question-text">How long does a typical project take?</span>
+            <span class="faq-question-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" 
+               id="faq-2"
+               data-accordion-content
+               style="display: none;">
+            <div class="faq-answer-content">
+              <p>Project timelines vary based on complexity and scope:</p>
+              <ul>
+                <li><strong>Simple websites:</strong> 2-4 weeks</li>
+                <li><strong>Business websites:</strong> 4-8 weeks</li>
+                <li><strong>E-commerce sites:</strong> 8-12 weeks</li>
+                <li><strong>Custom applications:</strong> 12+ weeks</li>
+              </ul>
+              <p>We'll provide a detailed timeline during the proposal phase.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-enhance="accordion">
+          <button class="faq-question" 
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-3">
+            <span class="faq-question-text">What's included in your pricing?</span>
+            <span class="faq-question-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" 
+               id="faq-3"
+               data-accordion-content
+               style="display: none;">
+            <div class="faq-answer-content">
+              <p>Our comprehensive packages typically include:</p>
+              <ul>
+                <li>Custom design and development</li>
+                <li>Mobile-responsive design</li>
+                <li>Content management system</li>
+                <li>Search engine optimization</li>
+                <li>Performance optimization</li>
+                <li>Security best practices</li>
+                <li>Testing and quality assurance</li>
+                <li>Training and documentation</li>
+                <li>30 days of post-launch support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="faq-cta">
+    <h2>Still have questions?</h2>
+    <p>We're here to help! Get in touch for a free consultation.</p>
+    <a href="/contact/" class="btn btn--primary btn--lg">Contact Us</a>
+  </div>
+</div>
       </div>
     </div>
   </div>
-</section>
-
-<section class="section" style="background-color: var(--color-bg-secondary);">
-  <div class="container">
-    <h2 class="text-center mb-8">Template Features</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="card text-center">
-        <div class="card__content">
-          <h3>⚡ Lightning Fast</h3>
-          <p>Optimized for performance with 90+ Lighthouse scores and Core Web Vitals compliance.</p>
-        </div>
-      </div>
-      
-      <div class="card text-center">
-        <div class="card__content">
-          <h3>♿ Accessible</h3>
-          <p>WCAG 2.1 AA compliant with automated testing and screen reader optimization.</p>
-        </div>
-      </div>
-      
-      <div class="card text-center">
-        <div class="card__content">
-          <h3>🛠️ Modern Tooling</h3>
-          <p>Built with 11ty, Vite, and comprehensive development workflows.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div data-animate="fadeInUp">
-  <h2>This will fade in from bottom when scrolled into view!</h2>
-</div>
-
-<div data-animate="slideInLeft" data-animate-delay="200">
-  <p>This slides in from the left with a delay</p>
-</div>
-
-<div data-animate="scaleIn" data-animate-delay="400">
-  <p>This scales in after an even longer delay</p>
-</div>
-
-<section class="section" style="background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-800) 100%); color: white;">
-  <div class="container">
-    <div class="text-center">
-      <h2 style="color: white;">Ready to Get Started?</h2>
-      <p class="lead" style="color: rgba(255, 255, 255, 0.9);">Download the template and start building amazing websites today.</p>
-      <div style="margin-top: var(--space-6);">
-        <a href="https://github.com/weave-studio/weave-starter-template" 
-           class="btn btn--xl"
-           style="background-color: white; color: var(--color-primary-600); border-color: white;"
-           target="_blank" 
-           rel="noopener noreferrer">
-          Download Template
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
+</article>
   </main>
   
   <!-- Site footer -->
