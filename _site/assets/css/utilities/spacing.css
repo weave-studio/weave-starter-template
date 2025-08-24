@@ -94,3 +94,474 @@
 .py-8 { padding-top: var(--space-8); padding-bottom: var(--space-8); }
 .py-12 { padding-top: var(--space-12); padding-bottom: var(--space-12); }
 .py-16 { padding-top: var(--space-16); padding-bottom: var(--space-16); }
+
+/* ==========================================================================
+   Global Spacing System Fixes - Phase A8 Fix
+   Added: 21st August 2025
+   ========================================================================== */
+
+/* ==========================================================================
+   Fix Prose Width Constraint Issues
+   ========================================================================== */
+
+/* Remove problematic max-width constraint from prose */
+.prose {
+   max-width: none !important; /* Remove 65ch constraint */
+   width: 100%;
+ }
+ 
+ /* Add responsive prose width only where needed */
+ .prose--constrained {
+   max-width: 65ch;
+   margin-left: auto;
+   margin-right: auto;
+ }
+ 
+ /* Blog posts should still have constrained width for readability */
+ .post__content .prose {
+   max-width: 75ch !important; /* Slightly wider than 65ch */
+   margin-left: auto;
+   margin-right: auto;
+ }
+ 
+ /* Service pages need full width for grid layouts */
+ .service-detail-page .prose,
+ .services-page .prose {
+   max-width: none !important;
+   width: 100%;
+ }
+
+ /* Constrain individual blog post content to readable width */
+.post .prose,
+.post__content .prose {
+  max-width: 70ch; /* Slightly wider than 65ch but not too wide */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure images in posts can still be wider */
+.post .prose img,
+.post__content .prose img {
+  max-width: 100%;
+  height: auto;
+  margin: var(--space-6) 0;
+}
+ 
+ /* ==========================================================================
+    Fix Grid Column Layout Issues
+    ========================================================================== */
+ 
+ /* Service detail pages grid fix */
+ .service-content .grid {
+   display: grid;
+   grid-template-columns: 1fr 300px;
+   gap: var(--space-12);
+   align-items: start;
+ }
+ 
+ @media (max-width: 1023px) {
+   .service-content .grid {
+     grid-template-columns: 1fr;
+     gap: var(--space-8);
+   }
+ }
+ 
+ /* Blog grid improvements */
+ .blog-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   gap: var(--space-8);
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+ 
+ /* Case studies grid improvements */
+ .case-studies-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+   gap: var(--space-8);
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+ 
+ /* ==========================================================================
+    Section Padding Standardization
+    ========================================================================== */
+ 
+ /* Standard section padding across all pages */
+ .page-section,
+ .content-section,
+ .services-grid,
+ .services-process,
+ .blog-content,
+ .case-studies-content,
+ .faq-sections,
+ .contact-content {
+   padding: var(--space-12) 0; /* Reduced from excessive padding */
+ }
+ 
+ /* Remove excessive top padding from page content */
+ .page__content,
+ .post__content,
+ .service-content,
+ .blog-page,
+ .case-studies-page,
+ .faq-page {
+   padding-top: 0; /* Remove duplicate top padding */
+ }
+ 
+ /* ==========================================================================
+    Container Width and Side Spacing Fixes
+    ========================================================================== */
+ 
+ /* Ensure containers don't have excessive side margins */
+ .container {
+   width: 100%;
+   max-width: var(--container-xl); /* 1280px */
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: var(--space-6);
+   padding-right: var(--space-6);
+ }
+ 
+ @media (min-width: 1024px) {
+   .container {
+     padding-left: var(--space-8);
+     padding-right: var(--space-8);
+   }
+ }
+ 
+ @media (min-width: 1536px) {
+   .container {
+     max-width: var(--container-2xl); /* 1536px on very large screens */
+   }
+ }
+ 
+ /* Fix specific page containers that have spacing issues */
+ .blog-grid .container,
+ .case-studies-grid .container,
+ .faq-sections .container,
+ .contact-content .container {
+   padding-left: var(--space-4);
+   padding-right: var(--space-4);
+ }
+ 
+ @media (min-width: 768px) {
+   .blog-grid .container,
+   .case-studies-grid .container,
+   .faq-sections .container,
+   .contact-content .container {
+     padding-left: var(--space-6);
+     padding-right: var(--space-6);
+   }
+ }
+ 
+ @media (min-width: 1024px) {
+   .blog-grid .container,
+   .case-studies-grid .container,
+   .faq-sections .container,
+   .contact-content .container {
+     padding-left: var(--space-8);
+     padding-right: var(--space-8);
+   }
+ }
+ 
+ /* ==========================================================================
+    Blog Page Specific Fixes
+    ========================================================================== */
+ 
+ /* Blog page layout improvements */
+ .blog-page {
+   min-height: 100vh;
+   padding-top: 0;
+ }
+ 
+ .blog-header {
+   background: var(--color-bg-secondary);
+   border-bottom: 1px solid var(--color-border-light);
+   margin-bottom: var(--space-10);
+   padding: var(--space-16) 0 var(--space-8) 0;
+   text-align: center;
+ }
+ 
+ [data-theme="dark"] .blog-header {
+   background: var(--color-gray-900);
+   border-bottom-color: var(--color-gray-700);
+ }
+ 
+ /* Featured post layout */
+ .featured-post {
+   margin-bottom: var(--space-12);
+   padding: var(--space-8);
+   background: var(--color-bg-primary);
+   border: 1px solid var(--color-border-light);
+   border-radius: var(--radius-lg);
+ }
+ 
+ [data-theme="dark"] .featured-post {
+   background: var(--color-gray-800);
+   border-color: var(--color-gray-700);
+ }
+ 
+ /* Blog sidebar spacing */
+ .blog-sidebar {
+   margin-top: var(--space-12);
+   padding: var(--space-8);
+   background: var(--color-bg-secondary);
+   border-radius: var(--radius-lg);
+   border: 1px solid var(--color-border-light);
+ }
+ 
+ [data-theme="dark"] .blog-sidebar {
+   background: var(--color-gray-900);
+   border-color: var(--color-gray-700);
+ }
+ 
+ /* ==========================================================================
+    Case Studies Page Fixes
+    ========================================================================== */
+ 
+ .case-studies-page {
+   min-height: 100vh;
+   padding-top: 0;
+ }
+ 
+ .case-studies-header {
+   background: var(--color-bg-secondary);
+   border-bottom: 1px solid var(--color-border-light);
+   text-align: center;
+ }
+ 
+ [data-theme="dark"] .case-studies-header {
+   background: var(--color-gray-900);
+   border-bottom-color: var(--color-gray-700);
+ }
+ 
+ /* Case study cards spacing */
+ .case-study-card {
+   background: var(--color-bg-primary);
+   border: 1px solid var(--color-border-light);
+   border-radius: var(--radius-lg);
+   overflow: hidden;
+   transition: all var(--duration-normal) var(--ease-out);
+ }
+ 
+ .case-study-card:hover {
+   transform: translateY(-2px);
+   box-shadow: var(--shadow-lg);
+ }
+ 
+ [data-theme="dark"] .case-study-card {
+   background: var(--color-gray-800);
+   border-color: var(--color-gray-700);
+ }
+ 
+ /* ==========================================================================
+    FAQ Page Fixes
+    ========================================================================== */
+ 
+ .faq-page {
+   min-height: 100vh;
+   padding-top: 0;
+ }
+ 
+ .faq-intro {
+   border-bottom: 1px solid var(--color-border-light);
+   padding: var(--space-16) 0 var(--space-8) 0;
+   text-align: center;
+ }
+ 
+ [data-theme="dark"] .faq-intro {
+   border-bottom-color: var(--color-gray-700);
+ }
+ 
+ /* FAQ sections layout */
+ .faq-sections {
+   max-width: 800px;
+   margin: 0 auto;
+ }
+ 
+ .faq-section {
+   margin-bottom: var(--space-12);
+ }
+ 
+ .faq-item {
+   margin-bottom: var(--space-4);
+ }
+ 
+ /* FAQ CTA section */
+ .faq-cta {
+   background: var(--color-bg-secondary);
+   padding: var(--space-12) 0;
+   text-align: center;
+   border-top: 1px solid var(--color-border-light);
+ }
+ 
+ [data-theme="dark"] .faq-cta {
+   background: var(--color-gray-900);
+   border-top-color: var(--color-gray-700);
+ }
+ 
+ /* ==========================================================================
+    Contact Page Major Overhaul
+    ========================================================================== */
+ 
+ .contact-page {
+   min-height: 100vh;
+   padding-top: 0;
+ }
+ 
+ .contact-hero {
+   background: var(--color-bg-secondary);
+   border-bottom: 1px solid var(--color-border-light);
+   text-align: center;
+ }
+ 
+ [data-theme="dark"] .contact-hero {
+   background: var(--color-gray-900);
+   border-bottom-color: var(--color-gray-700);
+ }
+ 
+ /* Contact content grid - MAJOR FIX */
+ .contact-content {
+   padding: var(--space-16) 0;
+ }
+ 
+ .contact-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: var(--space-12);
+   max-width: 1200px;
+   margin: 0 auto;
+   align-items: start;
+ }
+ 
+ @media (max-width: 1023px) {
+   .contact-grid {
+     grid-template-columns: 1fr;
+     gap: var(--space-8);
+     max-width: 600px;
+   }
+ }
+ 
+ /* Contact form section */
+ .contact-form-section {
+   background: var(--color-bg-primary);
+   padding: var(--space-8);
+   border-radius: var(--radius-lg);
+   border: 1px solid var(--color-border-light);
+ }
+ 
+ [data-theme="dark"] .contact-form-section {
+   background: var(--color-gray-800);
+   border-color: var(--color-gray-700);
+ }
+ 
+ /* Contact info section */
+ .contact-info-section {
+   background: var(--color-bg-secondary);
+   padding: var(--space-8);
+   border-radius: var(--radius-lg);
+   border: 1px solid var(--color-border-light);
+ }
+ 
+ [data-theme="dark"] .contact-info-section {
+   border-color: var(--color-gray-700);
+ }
+ 
+ /* ==========================================================================
+    Mobile Spacing Optimizations
+    ========================================================================== */
+ 
+ @media (max-width: 768px) {
+   /* Reduce hero padding on mobile */
+   .services-hero,
+   .blog-header,
+   .case-studies-header,
+   .faq-intro,
+   .contact-hero {
+     padding: var(--space-12) 0 var(--space-6) 0;
+   }
+   
+   /* Reduce section padding on mobile */
+   .page-section,
+   .content-section,
+   .services-grid,
+   .services-process,
+   .blog-content,
+   .case-studies-content,
+   .faq-sections,
+   .contact-content {
+     padding: var(--space-8) 0;
+   }
+   
+   /* Mobile container adjustments */
+   .container {
+     padding-left: var(--space-4);
+     padding-right: var(--space-4);
+   }
+   
+   /* Mobile grid adjustments */
+   .blog-grid,
+   .case-studies-grid {
+     grid-template-columns: 1fr;
+     gap: var(--space-6);
+   }
+ }
+ 
+ /* ==========================================================================
+    Typography Spacing Improvements
+    ========================================================================== */
+ 
+ /* Standardize heading spacing */
+ .prose h1,
+ .prose h2,
+ .prose h3,
+ .prose h4 {
+   margin-top: var(--space-8);
+   margin-bottom: var(--space-4);
+ }
+ 
+ .prose h1:first-child,
+ .prose h2:first-child,
+ .prose h3:first-child {
+   margin-top: 0;
+ }
+ 
+ /* Paragraph spacing */
+ .prose p {
+   margin-bottom: var(--space-4);
+   line-height: var(--line-height-relaxed);
+ }
+ 
+ .prose p:last-child {
+   margin-bottom: 0;
+ }
+ 
+ /* List spacing */
+ .prose ul,
+ .prose ol {
+   margin-bottom: var(--space-4);
+   padding-left: var(--space-6);
+ }
+ 
+ .prose li {
+   margin-bottom: var(--space-2);
+ }
+ 
+ /* ==========================================================================
+    Component Spacing Consistency
+    ========================================================================== */
+ 
+ /* Ensure all major page sections have consistent spacing */
+ section + section,
+ .page-section + .page-section,
+ .content-section + .content-section {
+   border-top: 1px solid var(--color-border-light);
+ }
+ 
+ [data-theme="dark"] section + section,
+ [data-theme="dark"] .page-section + .page-section,
+ [data-theme="dark"] .content-section + .content-section {
+   border-top-color: var(--color-gray-700);
+ }

@@ -149,7 +149,7 @@
   
   /* Prose content styling - extends your existing typography.css */
   .prose {
-    max-width: 65ch;
+    /* max-width: 65ch; */
     color: var(--color-text-primary);
     line-height: var(--line-height-relaxed);
   }

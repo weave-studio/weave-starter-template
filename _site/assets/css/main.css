@@ -15,6 +15,7 @@
 @import url('./components/theme-toggle.css');    
 @import url('./components/page-layouts.css'); 
 @import url('./components/cms-components.css'); 
+@import url('./components/services-components.css');
 @import url('./components/blog-components.css');
 @import url('./components/faq-components.css');
 @import url('./components/contact-components.css');
@@ -214,15 +215,15 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--space-4);
-  padding-right: var(--space-4);
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
 }
 
 @media (min-width: 640px) {
   .container {
     max-width: var(--container-sm);
-    padding-left: var(--space-6);
-    padding-right: var(--space-6);
+    padding-left: var(--space-10);
+    padding-right: var(--space-10);
   }
 }
 
@@ -479,3 +480,34 @@
   [data-theme="dark"] [style*="background-color: var(--color-bg-secondary)"] {
     background-color: #1f2937 !important;
   }
+
+  /* ==========================================================================
+   BUTTON SYSTEM OVERRIDES - Ensure new system takes precedence
+   ========================================================================== */
+
+/* Ensure text never disappears on any button hover */
+a[class*="btn"]:hover,
+button[class*="btn"]:hover,
+.btn:hover {
+  text-decoration: none !important;
+}
+
+/* Ensure consistent button behavior across all contexts */
+.btn,
+.btn--primary,
+.btn--secondary,
+.btn--light,
+.btn--read-more,
+.btn--tag,
+.btn--cta {
+  text-decoration: none;
+}
+
+/* High specificity override for problematic contexts */
+.hero a.btn:hover,
+.cta a.btn:hover,
+.blog-card a.btn:hover,
+.featured-post a.btn:hover {
+  text-decoration: none !important;
+  color: inherit;
+}

@@ -52,10 +52,6 @@ module.exports = {
           {
             text: "Consulting",
             url: "/services/consulting/"
-          },
-          {
-            text: "Maintenance",
-            url: "/services/maintenance/"
           }
         ]
       },

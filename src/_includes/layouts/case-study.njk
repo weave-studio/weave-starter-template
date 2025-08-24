@@ -21,11 +21,11 @@ layout: layouts/base.njk
       {% if technologies %}
         <div class="case-study__technologies">
           <h3>Technologies Used:</h3>
-          <ul class="case-study__tech-list">
+          <div class="case-study__tech-list">
             {% for tech in technologies %}
-              <li class="case-study__tech-item">{{ tech }}</li>
+              <span class="case-study__tech-item">{{ tech }}</span>
             {% endfor %}
-          </ul>
+          </div>
         </div>
       {% endif %}
       
@@ -61,7 +61,7 @@ layout: layouts/base.njk
   <footer class="case-study__footer">
     <div class="container">
       <nav class="case-study__navigation">
-        <a href="/case-studies/" class="case-study__back-link">
+        <a href="/case-studies/" class="btn btn--secondary">
           ← Back to Case Studies
         </a>
       </nav>

@@ -10,7 +10,7 @@ permalink: "/case-studies/"
     <article class="case-study-card">
       {% if study.data.featured_image %}
         <div class="case-study-card__image">
-          {% if loop.index <= 3 %}
+          {% if loop.index <= 2 %}
             {% image study.data.featured_image, study.data.featured_image_alt or study.data.title, "(min-width: 768px) 50vw, 100vw", "eager" %}
           {% else %}
             {% image study.data.featured_image, study.data.featured_image_alt or study.data.title, "(min-width: 768px) 50vw, 100vw", "lazy" %}
@@ -40,7 +40,7 @@ permalink: "/case-studies/"
           </div>
         {% endif %}
         
-        <a href="{{ study.url }}" class="case-study-card__link">View Case Study →</a>
+        <a href="{{ study.url }}" class="case-study-card__link btn btn--read-more">View Case Study →</a>
       </div>
     </article>
   {% endfor %}

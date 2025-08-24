@@ -92,7 +92,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('posts', function (collection) {
     return collection.getFilteredByGlob('src/blog/posts/*.md')
       .filter(post => !post.data.draft)
-      .reverse();
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
   });
   
   eleventyConfig.addCollection('tagList', function (collection) {
