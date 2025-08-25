@@ -1,0 +1,189 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Home" [ref=e7]:
+        - /url: /
+        - img "Weave Studio Template" [ref=e8]
+        - generic [ref=e9]: Weave Studio Template
+      - navigation "Main" [ref=e10]:
+        - list [ref=e11]:
+          - listitem [ref=e12]:
+            - link "Home" [ref=e13]:
+              - /url: /
+          - listitem [ref=e14]:
+            - link "About" [ref=e15]:
+              - /url: /about/
+          - listitem [ref=e16]:
+            - link "Services" [ref=e17]:
+              - /url: /services/
+          - listitem [ref=e18]:
+            - link "Blog" [ref=e19]:
+              - /url: /blog/
+          - listitem [ref=e20]:
+            - link "Contact" [ref=e21]:
+              - /url: /contact/
+      - generic [ref=e22]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: Search site content
+          - searchbox "Search site content" [ref=e27]
+          - img
+        - 'button "Current language: en. Click to change." [ref=e28] [cursor=pointer]': EN
+        - button "Switch to dark mode" [ref=e29] [cursor=pointer]:
+          - img [ref=e31] [cursor=pointer]
+          - img [ref=e34] [cursor=pointer]
+          - generic [ref=e36] [cursor=pointer]: Toggle dark mode
+  - main [ref=e37]:
+    - article [ref=e38]:
+      - generic [ref=e40]:
+        - heading "Our Services" [level=1] [ref=e41]
+        - paragraph [ref=e42]: Professional web design and development services to help your business grow online
+      - generic [ref=e46]:
+        - generic [ref=e48]:
+          - heading "Professional Web Services" [level=1] [ref=e49]
+          - paragraph [ref=e50]: We help businesses create exceptional digital experiences that convert visitors into customers.
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - img [ref=e56]
+            - generic [ref=e58]:
+              - heading "Web Design" [level=3] [ref=e59]
+              - paragraph [ref=e60]: Beautiful, user-focused designs that reflect your brand and engage your audience.
+              - list [ref=e61]:
+                - listitem [ref=e62]: ✓ Custom design concepts
+                - listitem [ref=e63]: ✓ Mobile-first approach
+                - listitem [ref=e64]: ✓ Brand integration
+                - listitem [ref=e65]: ✓ User experience optimization
+              - link "Learn More" [ref=e66] [cursor=pointer]:
+                - /url: /services/web-design/
+          - generic [ref=e67]:
+            - img [ref=e69]
+            - generic [ref=e72]:
+              - heading "Development" [level=3] [ref=e73]
+              - paragraph [ref=e74]: Modern, fast, and scalable websites built with the latest technologies.
+              - list [ref=e75]:
+                - listitem [ref=e76]: ✓ Custom development
+                - listitem [ref=e77]: ✓ CMS integration
+                - listitem [ref=e78]: ✓ Performance optimization
+                - listitem [ref=e79]: ✓ SEO implementation
+              - link "Learn More" [ref=e80] [cursor=pointer]:
+                - /url: /services/development/
+          - generic [ref=e81]:
+            - img [ref=e83]
+            - generic [ref=e85]:
+              - heading "Consulting" [level=3] [ref=e86]
+              - paragraph [ref=e87]: Strategic guidance to optimize your digital presence and improve conversions.
+              - list [ref=e88]:
+                - listitem [ref=e89]: ✓ Website audits
+                - listitem [ref=e90]: ✓ Performance analysis
+                - listitem [ref=e91]: ✓ Strategy planning
+                - listitem [ref=e92]: ✓ Technical guidance
+              - link "Learn More" [ref=e93] [cursor=pointer]:
+                - /url: /services/consulting/
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - heading "Our Process" [level=2] [ref=e97]
+            - paragraph [ref=e98]: How we work with you to create exceptional results
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - generic [ref=e102]: "1"
+              - heading "Discovery" [level=3] [ref=e103]
+              - paragraph [ref=e104]: We learn about your business goals, target audience, and project requirements.
+            - generic [ref=e105]:
+              - generic [ref=e106]: "2"
+              - heading "Strategy" [level=3] [ref=e107]
+              - paragraph [ref=e108]: We create a tailored plan that aligns with your objectives and user needs.
+            - generic [ref=e109]:
+              - generic [ref=e110]: "3"
+              - heading "Design & Build" [level=3] [ref=e111]
+              - paragraph [ref=e112]: We design and develop your solution with regular feedback and iterations.
+            - generic [ref=e113]:
+              - generic [ref=e114]: "4"
+              - heading "Launch & Support" [level=3] [ref=e115]
+              - paragraph [ref=e116]: We launch your project and provide ongoing support to ensure success.
+        - generic [ref=e119]:
+          - heading "Ready to Get Started?" [level=2] [ref=e120]
+          - paragraph [ref=e121]: Let's discuss your project and how we can help you achieve your goals.
+          - link "Start Your Project" [ref=e123] [cursor=pointer]:
+            - /url: /contact/
+  - contentinfo [ref=e124]:
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - heading "Weave Studio Template" [level=3] [ref=e129]
+          - paragraph [ref=e130]: A modern, accessible starter template for freelance web design projects built with 11ty, Vite, and Decap CMS.
+          - generic [ref=e131]:
+            - heading "Follow us" [level=4] [ref=e132]
+            - link "Twitter" [ref=e133]:
+              - /url: https://twitter.com/weavestudio
+              - img [ref=e134]
+              - generic [ref=e136]: Twitter
+            - link "GitHub" [ref=e137]:
+              - /url: https://github.com/weave-studio
+              - img [ref=e138]
+              - generic [ref=e140]: GitHub
+            - link "LinkedIn" [ref=e141]:
+              - /url: https://linkedin.com/company/weavestudio
+              - img [ref=e142]
+              - generic [ref=e144]: LinkedIn
+            - link "Instagram" [ref=e145]:
+              - /url: https://instagram.com/weavestudio
+              - img [ref=e146]
+              - generic [ref=e148]: Instagram
+        - generic [ref=e149]:
+          - heading "Services" [level=3] [ref=e150]
+          - list [ref=e151]:
+            - listitem [ref=e152]:
+              - link "Web Design" [ref=e153]:
+                - /url: /services/web-design/
+            - listitem [ref=e154]:
+              - link "Development" [ref=e155]:
+                - /url: /services/development/
+            - listitem [ref=e156]:
+              - link "Consulting" [ref=e157]:
+                - /url: /services/consulting/
+        - generic [ref=e158]:
+          - heading "Company" [level=3] [ref=e159]
+          - list [ref=e160]:
+            - listitem [ref=e161]:
+              - link "About" [ref=e162]:
+                - /url: /about/
+            - listitem [ref=e163]:
+              - link "Blog" [ref=e164]:
+                - /url: /blog/
+            - listitem [ref=e165]:
+              - link "Case Studies" [ref=e166]:
+                - /url: /case-studies/
+            - listitem [ref=e167]:
+              - link "Contact" [ref=e168]:
+                - /url: /contact/
+        - generic [ref=e169]:
+          - heading "Resources" [level=3] [ref=e170]
+          - list [ref=e171]:
+            - listitem [ref=e172]:
+              - link "Documentation" [ref=e173]:
+                - /url: /docs/
+            - listitem [ref=e174]:
+              - link "Style Guide" [ref=e175]:
+                - /url: /style-guide/
+            - listitem [ref=e176]:
+              - link "FAQ" [ref=e177]:
+                - /url: /faq/
+            - listitem [ref=e178]:
+              - link "Support" [ref=e179]:
+                - /url: /support/
+      - generic [ref=e180]:
+        - generic [ref=e181]:
+          - paragraph [ref=e182]: © 2025 Weave Studio Template. All rights reserved.
+          - link "Privacy Policy" [ref=e183]:
+            - /url: /privacy/
+          - link "Terms of Service" [ref=e184]:
+            - /url: /terms/
+        - paragraph [ref=e186]:
+          - text: Built with
+          - link "11ty" [ref=e187]:
+            - /url: https://11ty.dev
+```

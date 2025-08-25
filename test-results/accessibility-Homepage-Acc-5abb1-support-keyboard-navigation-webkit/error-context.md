@@ -1,0 +1,148 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Home" [ref=e7]:
+        - /url: /
+        - img "Weave Studio Template" [ref=e8]
+        - generic [ref=e9]: Weave Studio Template
+      - navigation "Main" [ref=e10]:
+        - list [ref=e11]:
+          - listitem [ref=e12]:
+            - link "Home" [ref=e13]:
+              - /url: /
+          - listitem [ref=e14]:
+            - link "About" [ref=e15]:
+              - /url: /about/
+          - listitem [ref=e16]:
+            - link "Services" [ref=e17]:
+              - /url: /services/
+          - listitem [ref=e18]:
+            - link "Blog" [ref=e19]:
+              - /url: /blog/
+          - listitem [ref=e20]:
+            - link "Contact" [ref=e21]:
+              - /url: /contact/
+      - generic [ref=e22]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: Search site content
+          - searchbox "Search site content" [ref=e27]
+          - img
+        - 'button "Current language: en. Click to change." [ref=e28] [cursor=pointer]': EN
+        - button "Switch to dark mode" [ref=e29] [cursor=pointer]:
+          - img [ref=e31] [cursor=pointer]
+          - img [ref=e34] [cursor=pointer]
+          - generic [ref=e36] [cursor=pointer]: Toggle dark mode
+  - main [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e41]:
+        - heading "Modern Web Design Made Simple" [level=1] [ref=e42]:
+          - text: Modern Web Design
+          - generic [ref=e43]: Made Simple
+        - paragraph [ref=e44]: High-performance, accessible starter template for freelance web design projects. Built with 11ty, Vite, and modern best practices.
+        - generic [ref=e45]:
+          - link "Learn more about our web design services and approach" [ref=e46] [cursor=pointer]:
+            - /url: /about/
+            - text: About Us
+          - link "Get started with your web design project by contacting us" [ref=e47] [cursor=pointer]:
+            - /url: /contact/
+            - text: Get Started
+      - generic [ref=e49]:
+        - heading "Template Features" [level=2] [ref=e50]
+        - generic [ref=e51]:
+          - generic [ref=e53]:
+            - heading "⚡ Lightning Fast" [level=3] [ref=e54]
+            - paragraph [ref=e55]: Optimized for performance with 90+ Lighthouse scores and Core Web Vitals compliance.
+          - generic [ref=e57]:
+            - heading "♿ Accessible" [level=3] [ref=e58]
+            - paragraph [ref=e59]: WCAG 2.1 AA compliant with automated testing and screen reader optimization.
+          - generic [ref=e61]:
+            - heading "🛠️ Modern Tooling" [level=3] [ref=e62]
+            - paragraph [ref=e63]: Built with 11ty, Vite, and comprehensive development workflows.
+      - generic [ref=e66]:
+        - heading "Ready to Get Started?" [level=2] [ref=e67]
+        - paragraph [ref=e68]: Download the template and start building amazing websites today.
+        - link "Download Template" [ref=e70] [cursor=pointer]:
+          - /url: https://github.com/weave-studio/weave-starter-template
+  - contentinfo [ref=e71]:
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - heading "Weave Studio Template" [level=3] [ref=e76]
+          - paragraph [ref=e77]: A modern, accessible starter template for freelance web design projects built with 11ty, Vite, and Decap CMS.
+          - generic [ref=e78]:
+            - heading "Follow us" [level=4] [ref=e79]
+            - link "Twitter" [ref=e80]:
+              - /url: https://twitter.com/weavestudio
+              - img [ref=e81]
+              - generic [ref=e83]: Twitter
+            - link "GitHub" [ref=e84]:
+              - /url: https://github.com/weave-studio
+              - img [ref=e85]
+              - generic [ref=e87]: GitHub
+            - link "LinkedIn" [ref=e88]:
+              - /url: https://linkedin.com/company/weavestudio
+              - img [ref=e89]
+              - generic [ref=e91]: LinkedIn
+            - link "Instagram" [ref=e92]:
+              - /url: https://instagram.com/weavestudio
+              - img [ref=e93]
+              - generic [ref=e95]: Instagram
+        - generic [ref=e96]:
+          - heading "Services" [level=3] [ref=e97]
+          - list [ref=e98]:
+            - listitem [ref=e99]:
+              - link "Web Design" [ref=e100]:
+                - /url: /services/web-design/
+            - listitem [ref=e101]:
+              - link "Development" [ref=e102]:
+                - /url: /services/development/
+            - listitem [ref=e103]:
+              - link "Consulting" [ref=e104]:
+                - /url: /services/consulting/
+        - generic [ref=e105]:
+          - heading "Company" [level=3] [ref=e106]
+          - list [ref=e107]:
+            - listitem [ref=e108]:
+              - link "About" [ref=e109]:
+                - /url: /about/
+            - listitem [ref=e110]:
+              - link "Blog" [ref=e111]:
+                - /url: /blog/
+            - listitem [ref=e112]:
+              - link "Case Studies" [ref=e113]:
+                - /url: /case-studies/
+            - listitem [ref=e114]:
+              - link "Contact" [ref=e115]:
+                - /url: /contact/
+        - generic [ref=e116]:
+          - heading "Resources" [level=3] [ref=e117]
+          - list [ref=e118]:
+            - listitem [ref=e119]:
+              - link "Documentation" [ref=e120]:
+                - /url: /docs/
+            - listitem [ref=e121]:
+              - link "Style Guide" [ref=e122]:
+                - /url: /style-guide/
+            - listitem [ref=e123]:
+              - link "FAQ" [ref=e124]:
+                - /url: /faq/
+            - listitem [ref=e125]:
+              - link "Support" [ref=e126]:
+                - /url: /support/
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - paragraph [ref=e129]: © 2025 Weave Studio Template. All rights reserved.
+          - link "Privacy Policy" [ref=e130]:
+            - /url: /privacy/
+          - link "Terms of Service" [ref=e131]:
+            - /url: /terms/
+        - paragraph [ref=e133]:
+          - text: Built with
+          - link "11ty" [ref=e134]:
+            - /url: https://11ty.dev
+```

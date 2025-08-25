@@ -1,0 +1,122 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Home" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img "Weave Studio Template" [ref=e8] [cursor=pointer]
+        - generic [ref=e9] [cursor=pointer]: Weave Studio Template
+      - list:
+        - listitem:
+          - link "Web Design":
+            - /url: /services/web-design/
+        - listitem:
+          - link "Development":
+            - /url: /services/development/
+        - listitem:
+          - link "Consulting":
+            - /url: /services/consulting/
+      - generic [ref=e10]:
+        - 'button "Current language: en. Click to change." [ref=e11] [cursor=pointer]': EN
+        - button "Switch to dark mode" [ref=e12] [cursor=pointer]:
+          - img [ref=e14] [cursor=pointer]
+          - img [ref=e17] [cursor=pointer]
+          - generic [ref=e19] [cursor=pointer]: Toggle dark mode
+        - button "Toggle navigation menu" [ref=e20] [cursor=pointer]:
+          - generic [ref=e24] [cursor=pointer]: Menu
+  - main [ref=e25]:
+    - article [ref=e26]:
+      - generic [ref=e28]:
+        - heading "About" [level=1] [ref=e29]
+        - paragraph [ref=e30]: Learn more about our web design services
+        - navigation "Breadcrumb" [ref=e31]:
+          - list [ref=e32]:
+            - listitem [ref=e33]:
+              - link "Home" [ref=e34] [cursor=pointer]:
+                - /url: /
+              - text: /
+            - listitem [ref=e35]:
+              - generic [ref=e36]: About
+      - generic [ref=e39]: "This is a sample about page using the page layout. ## Our Story We create modern, accessible websites that perform beautifully across all devices. ## Our Approach - Performance-first design - Accessibility compliance - Modern development practices"
+  - contentinfo [ref=e40]:
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - heading "Weave Studio Template" [level=3] [ref=e45]
+          - paragraph [ref=e46]: A modern, accessible starter template for freelance web design projects built with 11ty, Vite, and Decap CMS.
+          - generic [ref=e47]:
+            - heading "Follow us" [level=4] [ref=e48]
+            - link "Twitter" [ref=e49] [cursor=pointer]:
+              - /url: https://twitter.com/weavestudio
+              - img [ref=e50] [cursor=pointer]
+              - generic [ref=e52] [cursor=pointer]: Twitter
+            - link "GitHub" [ref=e53] [cursor=pointer]:
+              - /url: https://github.com/weave-studio
+              - img [ref=e54] [cursor=pointer]
+              - generic [ref=e56] [cursor=pointer]: GitHub
+            - link "LinkedIn" [ref=e57] [cursor=pointer]:
+              - /url: https://linkedin.com/company/weavestudio
+              - img [ref=e58] [cursor=pointer]
+              - generic [ref=e60] [cursor=pointer]: LinkedIn
+            - link "Instagram" [ref=e61] [cursor=pointer]:
+              - /url: https://instagram.com/weavestudio
+              - img [ref=e62] [cursor=pointer]
+              - generic [ref=e64] [cursor=pointer]: Instagram
+        - generic [ref=e65]:
+          - heading "Services" [level=3] [ref=e66]
+          - list [ref=e67]:
+            - listitem [ref=e68]:
+              - link "Web Design" [ref=e69] [cursor=pointer]:
+                - /url: /services/web-design/
+            - listitem [ref=e70]:
+              - link "Development" [ref=e71] [cursor=pointer]:
+                - /url: /services/development/
+            - listitem [ref=e72]:
+              - link "Consulting" [ref=e73] [cursor=pointer]:
+                - /url: /services/consulting/
+        - generic [ref=e74]:
+          - heading "Company" [level=3] [ref=e75]
+          - list [ref=e76]:
+            - listitem [ref=e77]:
+              - link "About" [ref=e78] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e79]:
+              - link "Blog" [ref=e80] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=e81]:
+              - link "Case Studies" [ref=e82] [cursor=pointer]:
+                - /url: /case-studies/
+            - listitem [ref=e83]:
+              - link "Contact" [ref=e84] [cursor=pointer]:
+                - /url: /contact/
+        - generic [ref=e85]:
+          - heading "Resources" [level=3] [ref=e86]
+          - list [ref=e87]:
+            - listitem [ref=e88]:
+              - link "Documentation" [ref=e89] [cursor=pointer]:
+                - /url: /docs/
+            - listitem [ref=e90]:
+              - link "Style Guide" [ref=e91] [cursor=pointer]:
+                - /url: /style-guide/
+            - listitem [ref=e92]:
+              - link "FAQ" [ref=e93] [cursor=pointer]:
+                - /url: /faq/
+            - listitem [ref=e94]:
+              - link "Support" [ref=e95] [cursor=pointer]:
+                - /url: /support/
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - paragraph [ref=e98]: © 2025 Weave Studio Template. All rights reserved.
+          - link "Privacy Policy" [ref=e99] [cursor=pointer]:
+            - /url: /privacy/
+          - link "Terms of Service" [ref=e100] [cursor=pointer]:
+            - /url: /terms/
+        - paragraph [ref=e102]:
+          - text: Built with
+          - link "11ty" [ref=e103] [cursor=pointer]:
+            - /url: https://11ty.dev
+```

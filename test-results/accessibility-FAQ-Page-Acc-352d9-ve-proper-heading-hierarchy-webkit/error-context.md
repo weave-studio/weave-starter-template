@@ -1,0 +1,144 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Home" [ref=e7]:
+        - /url: /
+        - img "Weave Studio Template" [ref=e8]
+        - generic [ref=e9]: Weave Studio Template
+      - navigation "Main" [ref=e10]:
+        - list [ref=e11]:
+          - listitem [ref=e12]:
+            - link "Home" [ref=e13]:
+              - /url: /
+          - listitem [ref=e14]:
+            - link "About" [ref=e15]:
+              - /url: /about/
+          - listitem [ref=e16]:
+            - link "Services" [ref=e17]:
+              - /url: /services/
+          - listitem [ref=e18]:
+            - link "Blog" [ref=e19]:
+              - /url: /blog/
+          - listitem [ref=e20]:
+            - link "Contact" [ref=e21]:
+              - /url: /contact/
+      - generic [ref=e22]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: Search site content
+          - searchbox "Search site content" [ref=e27]
+          - img
+        - 'button "Current language: en. Click to change." [ref=e28] [cursor=pointer]': EN
+        - button "Switch to dark mode" [ref=e29] [cursor=pointer]:
+          - img [ref=e31] [cursor=pointer]
+          - img [ref=e34] [cursor=pointer]
+          - generic [ref=e36] [cursor=pointer]: Toggle dark mode
+  - main [ref=e37]:
+    - article [ref=e38]:
+      - generic [ref=e40]:
+        - heading "Frequently Asked Questions" [level=1] [ref=e41]
+        - paragraph [ref=e42]: Common questions about our web design services and process
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - heading "Frequently Asked Questions" [level=1] [ref=e48]
+          - paragraph [ref=e49]: Find answers to common questions about our services, process, and pricing.
+        - generic [ref=e51]:
+          - heading "General Questions" [level=2] [ref=e52]
+          - generic [ref=e53]:
+            - button "What services do you offer?" [ref=e55] [cursor=pointer]:
+              - generic [ref=e56] [cursor=pointer]: What services do you offer?
+              - generic [ref=e57] [cursor=pointer]: +
+            - button "How long does a typical project take?" [ref=e59] [cursor=pointer]:
+              - generic [ref=e60] [cursor=pointer]: How long does a typical project take?
+              - generic [ref=e61] [cursor=pointer]: +
+            - generic:
+              - button "What's included in your pricing?":
+                - generic: What's included in your pricing?
+                - generic: +
+        - generic [ref=e62]:
+          - heading "Still have questions?" [level=2] [ref=e63]
+          - paragraph [ref=e64]: We're here to help! Get in touch for a free consultation.
+          - link "Contact Us" [ref=e65] [cursor=pointer]:
+            - /url: /contact/
+  - contentinfo [ref=e66]:
+    - generic [ref=e68]:
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - heading "Weave Studio Template" [level=3] [ref=e71]
+          - paragraph [ref=e72]: A modern, accessible starter template for freelance web design projects built with 11ty, Vite, and Decap CMS.
+          - generic [ref=e73]:
+            - heading "Follow us" [level=4] [ref=e74]
+            - link "Twitter" [ref=e75]:
+              - /url: https://twitter.com/weavestudio
+              - img [ref=e76]
+              - generic [ref=e78]: Twitter
+            - link "GitHub" [ref=e79]:
+              - /url: https://github.com/weave-studio
+              - img [ref=e80]
+              - generic [ref=e82]: GitHub
+            - link "LinkedIn" [ref=e83]:
+              - /url: https://linkedin.com/company/weavestudio
+              - img [ref=e84]
+              - generic [ref=e86]: LinkedIn
+            - link "Instagram" [ref=e87]:
+              - /url: https://instagram.com/weavestudio
+              - img [ref=e88]
+              - generic [ref=e90]: Instagram
+        - generic [ref=e91]:
+          - heading "Services" [level=3] [ref=e92]
+          - list [ref=e93]:
+            - listitem [ref=e94]:
+              - link "Web Design" [ref=e95]:
+                - /url: /services/web-design/
+            - listitem [ref=e96]:
+              - link "Development" [ref=e97]:
+                - /url: /services/development/
+            - listitem [ref=e98]:
+              - link "Consulting" [ref=e99]:
+                - /url: /services/consulting/
+        - generic [ref=e100]:
+          - heading "Company" [level=3] [ref=e101]
+          - list [ref=e102]:
+            - listitem [ref=e103]:
+              - link "About" [ref=e104]:
+                - /url: /about/
+            - listitem [ref=e105]:
+              - link "Blog" [ref=e106]:
+                - /url: /blog/
+            - listitem [ref=e107]:
+              - link "Case Studies" [ref=e108]:
+                - /url: /case-studies/
+            - listitem [ref=e109]:
+              - link "Contact" [ref=e110]:
+                - /url: /contact/
+        - generic [ref=e111]:
+          - heading "Resources" [level=3] [ref=e112]
+          - list [ref=e113]:
+            - listitem [ref=e114]:
+              - link "Documentation" [ref=e115]:
+                - /url: /docs/
+            - listitem [ref=e116]:
+              - link "Style Guide" [ref=e117]:
+                - /url: /style-guide/
+            - listitem [ref=e118]:
+              - link "FAQ" [ref=e119]:
+                - /url: /faq/
+            - listitem [ref=e120]:
+              - link "Support" [ref=e121]:
+                - /url: /support/
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - paragraph [ref=e124]: © 2025 Weave Studio Template. All rights reserved.
+          - link "Privacy Policy" [ref=e125]:
+            - /url: /privacy/
+          - link "Terms of Service" [ref=e126]:
+            - /url: /terms/
+        - paragraph [ref=e128]:
+          - text: Built with
+          - link "11ty" [ref=e129]:
+            - /url: https://11ty.dev
+```

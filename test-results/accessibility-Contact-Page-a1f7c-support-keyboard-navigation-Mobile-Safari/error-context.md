@@ -1,0 +1,168 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "Home" [ref=e7]:
+        - /url: /
+        - img "Weave Studio Template" [ref=e8]
+        - generic [ref=e9]: Weave Studio Template
+      - list:
+        - listitem:
+          - link "Web Design":
+            - /url: /services/web-design/
+        - listitem:
+          - link "Development":
+            - /url: /services/development/
+        - listitem:
+          - link "Consulting":
+            - /url: /services/consulting/
+      - generic [ref=e10]:
+        - 'button "Current language: en. Click to change." [ref=e11] [cursor=pointer]': EN
+        - button "Switch to dark mode" [ref=e12] [cursor=pointer]:
+          - img [ref=e14] [cursor=pointer]
+          - img [ref=e17] [cursor=pointer]
+          - generic [ref=e19] [cursor=pointer]: Toggle dark mode
+        - button "Toggle navigation menu" [ref=e20] [cursor=pointer]:
+          - generic [ref=e24] [cursor=pointer]: Menu
+  - main [ref=e25]:
+    - article [ref=e26]:
+      - generic [ref=e28]:
+        - heading "Contact" [level=1] [ref=e29]
+        - paragraph [ref=e30]: Get in touch for your next web design project
+      - generic [ref=e34]:
+        - generic [ref=e36]:
+          - heading "Let's Work Together" [level=1] [ref=e37]
+          - paragraph [ref=e38]: Ready to bring your vision to life? Let's discuss your project.
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - heading "Send a Message" [level=2] [ref=e43]
+            - generic [ref=e44]:
+              - generic [ref=e45]:
+                - generic [ref=e46]:
+                  - text: Full Name
+                  - generic [ref=e47]: "*"
+                - textbox "Full Name *" [ref=e48]
+                - generic [ref=e49]: ⚠ This field is required
+              - generic [ref=e50]:
+                - generic [ref=e51]:
+                  - text: Email Address
+                  - generic [ref=e52]: "*"
+                - textbox "Email Address *" [ref=e53]
+                - generic [ref=e54]: ⚠ This field is required
+              - generic [ref=e55]:
+                - generic [ref=e56]:
+                  - text: Project Type
+                  - generic [ref=e57]: "*"
+                - combobox "Project Type *" [ref=e58]:
+                  - option "Please select..." [selected]
+                  - option "New Website"
+                  - option "Website Redesign"
+                  - option "E-commerce"
+                  - option "Website Maintenance"
+                  - option "Consulting"
+                  - option "Other"
+                - generic [ref=e59]: ⚠ This field is required
+              - generic [ref=e60]:
+                - generic [ref=e61]:
+                  - text: Project Details
+                  - generic [ref=e62]: "*"
+                - textbox "Project Details *" [ref=e63]
+                - generic [ref=e64]: Minimum 20 characters
+                - generic [ref=e65]: ⚠ This field is required
+              - button "Send Message" [ref=e67] [cursor=pointer]:
+                - generic [ref=e68] [cursor=pointer]: Send Message
+          - generic [ref=e69]:
+            - heading "Get in Touch" [level=2] [ref=e70]
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - heading "Email" [level=3] [ref=e73]
+                - link "hello@weavestudio.co" [ref=e74]:
+                  - /url: mailto:hello@weavestudio.co
+              - generic [ref=e75]:
+                - heading "Response Time" [level=3] [ref=e76]
+                - paragraph [ref=e77]: We typically respond within 24 hours
+              - generic [ref=e78]:
+                - heading "Free Consultation" [level=3] [ref=e79]
+                - paragraph [ref=e80]: 30-minute discovery call to discuss your project
+  - contentinfo [ref=e81]:
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - heading "Weave Studio Template" [level=3] [ref=e86]
+          - paragraph [ref=e87]: A modern, accessible starter template for freelance web design projects built with 11ty, Vite, and Decap CMS.
+          - generic [ref=e88]:
+            - heading "Follow us" [level=4] [ref=e89]
+            - link "Twitter" [ref=e90]:
+              - /url: https://twitter.com/weavestudio
+              - img [ref=e91]
+              - generic [ref=e93]: Twitter
+            - link "GitHub" [ref=e94]:
+              - /url: https://github.com/weave-studio
+              - img [ref=e95]
+              - generic [ref=e97]: GitHub
+            - link "LinkedIn" [ref=e98]:
+              - /url: https://linkedin.com/company/weavestudio
+              - img [ref=e99]
+              - generic [ref=e101]: LinkedIn
+            - link "Instagram" [ref=e102]:
+              - /url: https://instagram.com/weavestudio
+              - img [ref=e103]
+              - generic [ref=e105]: Instagram
+        - generic [ref=e106]:
+          - heading "Services" [level=3] [ref=e107]
+          - list [ref=e108]:
+            - listitem [ref=e109]:
+              - link "Web Design" [ref=e110]:
+                - /url: /services/web-design/
+            - listitem [ref=e111]:
+              - link "Development" [ref=e112]:
+                - /url: /services/development/
+            - listitem [ref=e113]:
+              - link "Consulting" [ref=e114]:
+                - /url: /services/consulting/
+        - generic [ref=e115]:
+          - heading "Company" [level=3] [ref=e116]
+          - list [ref=e117]:
+            - listitem [ref=e118]:
+              - link "About" [ref=e119]:
+                - /url: /about/
+            - listitem [ref=e120]:
+              - link "Blog" [ref=e121]:
+                - /url: /blog/
+            - listitem [ref=e122]:
+              - link "Case Studies" [ref=e123]:
+                - /url: /case-studies/
+            - listitem [ref=e124]:
+              - link "Contact" [ref=e125]:
+                - /url: /contact/
+        - generic [ref=e126]:
+          - heading "Resources" [level=3] [ref=e127]
+          - list [ref=e128]:
+            - listitem [ref=e129]:
+              - link "Documentation" [ref=e130]:
+                - /url: /docs/
+            - listitem [ref=e131]:
+              - link "Style Guide" [ref=e132]:
+                - /url: /style-guide/
+            - listitem [ref=e133]:
+              - link "FAQ" [ref=e134]:
+                - /url: /faq/
+            - listitem [ref=e135]:
+              - link "Support" [ref=e136]:
+                - /url: /support/
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - paragraph [ref=e139]: © 2025 Weave Studio Template. All rights reserved.
+          - link "Privacy Policy" [ref=e140]:
+            - /url: /privacy/
+          - link "Terms of Service" [ref=e141]:
+            - /url: /terms/
+        - paragraph [ref=e143]:
+          - text: Built with
+          - link "11ty" [ref=e144]:
+            - /url: https://11ty.dev
+```
